@@ -120,3 +120,9 @@ the [Docker SDK client/events](https://docker-py.readthedocs.io/en/stable/client
 and [container inspection](https://docker-py.readthedocs.io/en/stable/containers.html)
 documentation, and Syft's [scan targets and Docker socket settings](https://oss.anchore.com/docs/guides/sbom/scan-targets/)
 and [output formats](https://oss.anchore.com/docs/guides/sbom/formats/).
+
+## License
+
+[MIT](LICENSE), copyright 2026 Jens Schmidt. You can reuse, modify, and
+redistribute this example, including commercially, provided you keep the
+copyright and license notice. The software is provided without warranty.

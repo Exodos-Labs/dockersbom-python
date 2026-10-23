@@ -1,13 +1,13 @@
 # Docker → Syft → Exodos
 
-A small Python example for a blog post: when a Docker container starts,
-generate an image SBOM with Syft and upload it to a child inventory in Exodos.
+A small Python example: when a Docker container starts,
+generate an image SBOM with Syft and upload it to a child inventory in [exodos.io](https://app.exodos.io) ([Exodos Labs, Inc.'s](https://www.exodoslabs.com) SBOM Intelligence Platform).
 One script, two Python dependencies, no persistent state.
 
 ## Setup
 
 You need Python 3.10+, a running local Docker daemon, and an already installed
-[Syft executable](https://github.com/anchore/syft). You also need an Exodos
+[Syft executable](https://github.com/anchore/syft). You also need an [exodos.io](https://app.exodos.io/) Account with your
 organization, an existing parent inventory, and an API key allowed to list its
 children, create child inventories, and upload SBOMs.
 
@@ -47,7 +47,7 @@ Press Ctrl+C to stop.
 3. Inspect each container and scan its immutable `sha256:…` image ID with
    `syft scan --from docker … -o cyclonedx-json=…`, using a temporary directory.
    Event tags are never used as scan targets.
-4. Find or create a private child inventory beneath the configured parent.
+4. Find or create a private child inventory beneath the configured parent per Container in exodos.io.
 5. Upload Syft's JSON bytes unchanged, print the inventory UUID and returned
    BOM ID, then remove the temporary files.
 
@@ -123,6 +123,6 @@ and [output formats](https://oss.anchore.com/docs/guides/sbom/formats/).
 
 ## License
 
-[MIT](LICENSE), copyright 2026 Jens Schmidt. You can reuse, modify, and
+[MIT](LICENSE), copyright 2026 Jens Schmidt, Exodos Labs, Inc. You can reuse, modify, and
 redistribute this example, including commercially, provided you keep the
 copyright and license notice. The software is provided without warranty.
